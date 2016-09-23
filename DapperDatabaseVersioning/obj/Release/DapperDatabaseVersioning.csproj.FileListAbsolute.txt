@@ -1,0 +1,8 @@
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\bin\Release\DapperDatabaseVersioning.exe.config
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\bin\Release\DapperDatabaseVersioning.exe
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\bin\Release\DapperDatabaseVersioning.pdb
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\bin\Release\Dapper.dll
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\bin\Release\Dapper.xml
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\obj\Release\DapperDatabaseVersioning.exe
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\obj\Release\DapperDatabaseVersioning.pdb
+c:\DapperDatabaseVersioning\DapperDatabaseVersioning\obj\Release\DapperDatabaseVersioning.csprojResolveAssemblyReference.cache
