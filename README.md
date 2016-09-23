@@ -3,6 +3,9 @@ Simple database versioning tool using Dapper. Based on the ShipCompliant impleme
 
 # Gaps
 No backout strategy
+
+Logging is very very primative (as in, `Console.WriteLine`)
+
 Many more I'm sure
 
 # Usage
