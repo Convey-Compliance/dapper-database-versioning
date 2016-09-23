@@ -7,11 +7,16 @@ Many more I'm sure
 
 # Usage
 
-/scriptDirectory: the directory that houses all of the SQL scripts to be run
-/testMode: if specified, will rollback the transaction with the scripts run instead of committing
+`/scriptDirectory`: the directory that houses all of the SQL scripts to be run
 
-Connection string information
-/server
-/database
-/user
-/password
+`/testMode`: if specified, will rollback the transaction with the scripts run instead of committing
+
+## Connection string information
+
+`/server`
+
+`/database`
+
+`/user`
+
+`/password`
