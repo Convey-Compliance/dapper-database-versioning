@@ -23,3 +23,8 @@ Many more I'm sure
 `/user`
 
 `/password`
+
+
+Based on the information above, the process will find all *.sql files in the specified directory and run the scripts against the connection string information specified.
+
+After running the script a log entry is created in a table called `DBVersions` (this table is bootstrapped by this process). Additional runs of this process with the same folder check against this versioning system to avoid running scripts twice.
