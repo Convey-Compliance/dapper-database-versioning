@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DapperDatabaseVersioning
 {
-    public static class ExceptionExtensions
+    internal static class ExceptionExtensions
     {
         /// <summary>
 		/// Obtains the "most recent" exception of type <typeparamref name="TException"/> within the scope of <paramref name="e"/> or any of its nested inner exceptions, if it exists.

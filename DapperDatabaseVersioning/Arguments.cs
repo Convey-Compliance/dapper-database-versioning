@@ -17,7 +17,7 @@ using System.Text.RegularExpressions;
 
 namespace DapperDatabaseVersioning
 {
-    public class Arguments
+    internal class Arguments
     {
 
         public static Arguments Empty
