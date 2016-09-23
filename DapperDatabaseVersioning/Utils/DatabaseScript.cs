@@ -14,9 +14,9 @@ namespace DapperDatabaseVersioning.Utils
 
         public DatabaseScript(FileInfo file)
         {
-            if (file == null) throw new ArgumentNullException("file");
+            if (file == null) throw new ArgumentNullException(nameof(file));
             if (!file.Exists)
-                throw new ArgumentException(string.Format("File {0} does not exist.", file.FullName), "file");
+                throw new ArgumentException($"File {file.FullName} does not exist.", nameof(file));
 
             _file = file;
         }
@@ -47,8 +47,7 @@ namespace DapperDatabaseVersioning.Utils
         {
             if (!CanProcess)
                 throw new InvalidOperationException(
-                    string.Format("DB script {0} cannot be processed because its name could not be parsed",
-                        _file.FullName));
+                    $"DB script {_file.FullName} cannot be processed because its name could not be parsed");
             if (MD5 == null) throw new InvalidOperationException("MD5 hash algorithm could not be created");
 
             using (var stream = _file.OpenRead())
@@ -70,12 +69,11 @@ namespace DapperDatabaseVersioning.Utils
                         var tranKeywords = new[] { "begin tran", "commit tran" };
                         if (tranKeywords.Any(s => trimmed.StartsWith(s, StringComparison.OrdinalIgnoreCase)))
                             throw new InvalidOperationException(
-                                string.Format("DB script {0} has transaction keywords.  Transactions are not allowed.",
-                                    _file.FullName));
+                                $"DB script {_file.FullName} has transaction keywords.  Transactions are not allowed.");
 
                         if (trimmed.StartsWith("set ansi_padding off", StringComparison.OrdinalIgnoreCase))
                             throw new InvalidOperationException(
-                                string.Format("DB script {0} has SET ANSI_PADDING OFF.  Bad developer!", _file.FullName));
+                                $"DB script {_file.FullName} has SET ANSI_PADDING OFF.  Bad developer!");
 
                         if (string.Equals(trimmed, "go", StringComparison.OrdinalIgnoreCase))
                         {
@@ -104,7 +102,7 @@ namespace DapperDatabaseVersioning.Utils
 
         int IComparable<DatabaseScript>.CompareTo(DatabaseScript other)
         {
-            return Comparer.Compare(_file.Name, other == null ? null : other._file.Name);
+            return Comparer.Compare(_file.Name, other?._file.Name);
         }
 
         private readonly FileInfo _file;
